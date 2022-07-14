@@ -1,0 +1,66 @@
+{
+	"title": "valid room query 1",
+	"input": {
+		"WHERE": {},
+		"OPTIONS": {
+			"COLUMNS": [
+				"rooms_furniture",
+				"freq"
+			]
+		},
+		"TRANSFORMATIONS": {
+			"GROUP": [
+				"rooms_furniture"
+			],
+			"APPLY": [
+				{
+					"freq": {
+						"COUNT": "rooms_furniture"
+					}
+				}
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [
+		{
+			"rooms_furniture":"Classroom-Fixed Tables/Movable Chairs",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Movable Tables & Chairs",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Moveable Tables & Chairs",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Moveable Tablets",
+			"freq":1
+		},{
+			"rooms_furniture":"Classroom-Fixed Tablets",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Fixed Tables/Fixed Chairs",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Fixed Tables/Moveable Chairs",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Movable Tablets",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Hybrid Furniture",
+			"freq":1
+		},
+		{
+			"rooms_furniture":"Classroom-Learn Lab",
+			"freq":1
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+  "title":"complex avg>91 and avg<89",
+  "input":{
+    "WHERE": {
+      "AND": [
+        {
+          "LT": {
+            "courses_avg": 89
+          }
+        },
+        {
+          "IS": {
+            "courses_dept": "adhe"
+          }
+        },
+        {
+          "GT": {
+            "courses_avg": 91
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":false,
+  "with":[
+
+  ]
+}

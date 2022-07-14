@@ -1,0 +1,12 @@
+{
+  "title": "invalid format 11",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "courses_avg": 90
+      }
+    }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,17 @@
+{
+	"title": "invalid type in mcomparison",
+	"input": {
+		"WHERE": {
+			"LT": {
+				"courses_dept": "math"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept"
+			]
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

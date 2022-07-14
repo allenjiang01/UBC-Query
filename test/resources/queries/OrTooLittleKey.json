@@ -1,0 +1,22 @@
+{
+	"title": "OR too little key",
+	"input": {
+		"WHERE": {
+		},
+		"OR": [
+			{
+				"GT": {
+					"courses_avg": 98
+				}
+			}
+		],
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

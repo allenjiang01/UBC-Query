@@ -1,0 +1,49 @@
+{
+  "title":"complex 4",
+  "input":{
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 95
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "cpsc"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "courses_avg": 98
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":false,
+  "with":[
+    {
+      "courses_dept":"crwr",
+      "courses_id":"599",
+      "courses_avg":98
+    },
+    {
+      "courses_dept":"crwr",
+      "courses_id":"599",
+      "courses_avg":98
+    }
+  ]
+}

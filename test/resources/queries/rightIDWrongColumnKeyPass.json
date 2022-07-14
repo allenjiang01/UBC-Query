@@ -1,0 +1,27 @@
+{
+  "title":"right id wrong column key pass",
+  "input":{
+    "WHERE":{
+      "GT":{
+        "courses_avg":99
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[
+        "courses_dep",
+        "courses_id",
+        "courses_avg",
+        "courses_instructor",
+        "courses_title",
+        "courses_pss",
+        "courses_fail",
+        "courses_audit",
+        "courses_uuid",
+        "courses_year"
+      ],
+      "ORDER":"courses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with":"InsightError"
+}

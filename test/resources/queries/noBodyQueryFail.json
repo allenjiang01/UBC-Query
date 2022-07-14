@@ -1,0 +1,15 @@
+{
+  "title":"no body query fail",
+  "input":{
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with":"InsightError"
+}

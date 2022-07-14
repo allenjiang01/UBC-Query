@@ -1,0 +1,19 @@
+{
+  "title":"more than one dataset",
+  "input":{
+    "WHERE":{
+      "GT":{
+        "courses_avg":99
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[
+        "smallCourses_dept",
+        "smallCourses_avg"
+      ],
+      "ORDER":"smallCourses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with": "InsightError"
+}

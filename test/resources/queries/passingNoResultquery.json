@@ -1,0 +1,21 @@
+{
+  "title":"avg too high",
+  "input":{
+    "WHERE":{
+      "GT":{
+        "courses_avg":101
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[
+        "courses_dept",
+        "courses_avg"
+      ],
+      "ORDER":"courses_avg"
+    }
+  },
+  "errorExpected":false,
+  "with":[
+
+  ]
+}

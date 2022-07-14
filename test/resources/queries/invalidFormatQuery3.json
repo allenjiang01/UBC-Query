@@ -1,0 +1,19 @@
+{
+  "title":"invalid format 3",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "courses_avg": 90
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "cou_rses_dept",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with":"InsightError"
+}

@@ -1,0 +1,19 @@
+{
+  "title":"dataset not added",
+  "input":{
+    "WHERE":{
+      "GT":{
+        "example_avg":99
+      }
+    },
+    "OPTIONS":{
+      "COLUMNS":[
+        "example_dept",
+        "example_avg"
+      ],
+      "ORDER":"example_avg"
+    }
+  },
+  "errorExpected":true,
+  "with": "InsightError"
+}

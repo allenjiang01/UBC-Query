@@ -1,0 +1,38 @@
+{
+  "title":"multiple column id",
+  "input":{
+    "WHERE": {
+      "OR": [
+        {
+          "AND": [
+            {
+              "GT": {
+                "courses_avg": 95
+              }
+            },
+            {
+              "IS": {
+                "courses_dept": "adhe"
+              }
+            }
+          ]
+        },
+        {
+          "EQ": {
+            "courses_avg": 99
+
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_dept"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with":"InsightError"
+}

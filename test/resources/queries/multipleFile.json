@@ -1,0 +1,32 @@
+{
+	"title":"multiple dataset added",
+	"input":{
+		"WHERE":{
+			"GT":{
+				"smallCourses_avg":99
+			}
+		},
+		"OPTIONS":{
+			"COLUMNS":[
+				"smallCourses_dept",
+				"smallCourses_avg"
+			],
+			"ORDER":"smallCourses_avg"
+		}
+	},
+	"errorExpected":false,
+	"with":[
+		{
+			"smallCourses_dept":"cnps",
+			"smallCourses_avg":99.19
+		},
+		{
+			"smallCourses_dept":"math",
+			"smallCourses_avg":99.78
+		},
+		{
+			"smallCourses_dept":"math",
+			"smallCourses_avg":99.78
+		}
+	]
+}

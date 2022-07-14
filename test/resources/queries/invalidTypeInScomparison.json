@@ -1,0 +1,19 @@
+{
+	"title": "invalid type in scomparison",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"courses_avg": 80
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

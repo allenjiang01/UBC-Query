@@ -1,0 +1,6 @@
+{
+  "title":"wrong type query fail",
+  "input":"",
+  "errorExpected":true,
+  "with":"InsightError"
+}

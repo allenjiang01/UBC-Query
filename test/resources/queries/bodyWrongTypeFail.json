@@ -1,0 +1,16 @@
+{
+  "title":"body wrong type fail",
+  "input":{
+    "WHERE": [],
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected":true,
+  "with":"InsightError"
+}

@@ -1,0 +1,6 @@
+{
+  "title": "invalid format 10",
+  "input": {},
+  "errorExpected": true,
+  "with": "InsightError"
+}
