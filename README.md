@@ -49,4 +49,4 @@ Project Sprint 1 (C1) built a query engine to answer queries about UBC course se
 This data has been obtained from the UBC Building and classrooms listing (although a few years ago). The data is provided as a zip file: inside of the zip you will find index.htm which specifies each building on campus. The links in the index.htm link to files also in the zip containing details about each building and its rooms in HTML format.
 
 ### C3
-The existing InsightFacade will be adpated to also be accessed using REST endpoints. The goal of this sprint will be to build a website using HTML and plain JavaScript which will send REST commands to your server. 
+The existing InsightFacade will be adpated to also be accessed using REST endpoints. The goal of this sprint will be to build a website using HTML and plain JavaScript which will send REST commands to the server. 
