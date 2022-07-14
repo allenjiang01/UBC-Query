@@ -1,36 +1,52 @@
 # CPSC 310 Project Repository
 
-This repository contains starter code for the class project.
-Please keep your repository private.
+## Description
+UBC is a big place, and involves a large number of people doing a variety of tasks. The goal of this project is to provide a way to perform some of the tasks required to run the university and to enable effective querying of the metadata from around campus. This will involve working with courses, prerequisites, past course averages, room scheduling, and timetable creation.
 
-For information about the project, autotest, and the checkpoints, see the course webpage.
+This will be a full stack web development project split into four sprints. The first three sprints are server-side development using Node. The fourth sprint is client-side development.
 
-## Configuring your environment
+Development will be done with TypeScript and the packages and libraries are strictly limited (for the first three sprints).
 
-To start using this project, you need to get your computer configured so you can build and execute the code.
-To do this, follow these steps; the specifics of each step (especially the first two) will vary based on which operating system your computer has:
+### C0
+Unit tests for the four methods of the InsightFacade class. These tests will form the basis of my personal test suite for the remainder of the project.
 
-1. [Install git](https://git-scm.com/downloads) (v2.X). After installing you should be able to execute `git --version` on the command line.
+### C1
+The goal of the checkpoint is to build the backend to reply to query about the dataset. The dataset must be manually added and the server must:
+- Check the validity of the dataset
+- Read and parse the dataset
 
-1. [Install Node LTS](https://nodejs.org/en/download/) (v14.17.X), which will also install NPM (you should be able to execute `node --version` and `npm --version` on the command line).
+EXAMPLE QUERY: 
+{
 
-1. [Install Yarn](https://yarnpkg.com/en/docs/install) (v1.22+). You should be able to execute `yarn --version` afterwards.
+    "WHERE":{
 
-1. Clone your repository by running `git clone REPO_URL` from the command line. You can get the REPO_URL by clicking on the green button on your project repository page on GitHub. Note that due to new department changes you can no longer access private git resources using https and a username and password. You will need to use either [an access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) or [SSH](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
+       "GT":{
 
-## Project commands
+          "courses_avg":97
 
-Once your environment is configured you need to further prepare the project's tooling and dependencies.
-In the project folder:
+       }
 
-1. `yarn install` to download the packages specified in your project's *package.json* to the *node_modules* directory.
+    },
 
-1. `yarn build` to compile your project. You must run this command after making changes to your TypeScript files.
+    "OPTIONS":{
 
-1. `yarn test` to run the test suite.
+       "COLUMNS":[
 
-1. `yarn pretty` to prettify your project code.
+          "courses_dept",
 
-## Running and testing from an IDE
+          "courses_avg"
 
-IntelliJ Ultimate should be automatically configured the first time you open the project (IntelliJ Ultimate is a free download through their students program)
+       ],
+
+       "ORDER":"courses_avg"
+
+    }
+
+} 
+### C2
+Project Sprint 1 (C1) built a query engine to answer queries about UBC course sections. C2 will extend the C1 solution by adding another type of input data (rooms) and extending the query language (adding result computation). The input data will now include data about the physical spaces where classes are held on campus.
+
+This data has been obtained from the UBC Building and classrooms listing (although a few years ago). The data is provided as a zip file: inside of the zip you will find index.htm which specifies each building on campus. The links in the index.htm link to files also in the zip containing details about each building and its rooms in HTML format.
+
+### C3
+The existing InsightFacade will be adpated to also be accessed using REST endpoints. The goal of this sprint will be to build a website using HTML and plain JavaScript which will send REST commands to your server. 
